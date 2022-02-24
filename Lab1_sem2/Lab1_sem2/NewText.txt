@@ -1,0 +1,54 @@
+ f - 1
+f  - 1
+ f - 1
+f - 1
+ f - 1
+f  - 1
+f - 1
+f  - 1
+ f - 1
+ f - 1
+f  - 1
+ f - 1
+ f - 1
+ f - 1
+ f - 1
+f - 1
+as - 2
+as - 2
+d f - 2
+asd - 3
+ad f - 3
+sda  - 3
+sad - 3
+sda - 3
+sda  - 3
+sda  - 3
+asd  - 3
+a sd - 3
+asd - 3
+ asd - 3
+dsa - 3
+asd - 3
+ads - 3
+asd - 3
+asd - 3
+sad - 3
+sad - 3
+sad - 3
+asd  - 3
+fsad - 4
+sda f - 4
+sda f - 4
+fsad - 4
+fasd - 4
+ fdsa - 4
+fasd - 4
+11111 - 5
+f sad fs - 6
+as das dsa - 8
+222222222 - 9
+sdfsdf sadf sad - 13
+33333333333333 - 14
+ asd asd as das das das d - 18
+asdadasd asd asd asd sa das das d - 26
