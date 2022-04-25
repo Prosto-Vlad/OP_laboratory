@@ -1,4 +1,3 @@
-#include <iostream>
 #include "CppHeader.h"
 
 using namespace std;
@@ -8,13 +7,22 @@ int main()
 	string Path = "AllCustomers.txt";
 	string SecPath = "SecondCustomers.txt";
 	string AnotherPath = "AnotherCustomers.txt";
-	int choice;
 
-	Customer cust = customer_fill();
+	edit_or_create(Path);
+	out_file_data(Path);
+	cout << endl;
 
-	cout << cust.name_and_secondname << endl;
-	cout << "Last visit: ";
-	date_out(cust.lastVisit);
-	cout << "Next visit: ";
-	date_out(cust.NextVisit);
+	delet_old_customers(Path);
+	cout << "Customers list without old customers" << endl;
+	out_file_data(Path);
+	cout << endl;
+
+	make_second_customers_list(Path, SecPath, AnotherPath);
+	cout << "Second customers list" << endl;
+	out_file_data(SecPath);
+	cout << endl;
+
+	cout << "Another customers list" << endl;
+	out_file_data(AnotherPath);
+	cout << endl;
 }
