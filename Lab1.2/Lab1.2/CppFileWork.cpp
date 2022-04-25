@@ -1,24 +1,9 @@
 #include "CppHeader.h"
 
-void edit_or_create(string path)
-{
-	int choice;
-	cout << "You want to edit or overwrite the file?\n1 - edit\n2 - owerwrite\n";
-	cin >> choice;
-
-	while (choice < 1 && choice > 2)
-	{
-		cout << "You enter the wrong number! Please enter 1 or 2";
-		cin >> choice;
-	}
-	if (choice == 1) edit_file(path);
-	else create_file(path);
-}
-
 void edit_file(string path)
 {
-	ofstream outFile(path, ios::binary || ios::app);
-	if (!outFile)
+	ofstream writeFile(path, ios::binary || ios::app);
+	if (!writeFile)
 	{
 		cout << "Error!";
 	}
@@ -28,18 +13,18 @@ void edit_file(string path)
 		customers = vec_customer_fill();
 		for (int i = 0; i < customers.size(); i++)
 		{
-			outFile.write((char*)&customers, sizeof(Customer));
+			writeFile.write((char*)&customers, sizeof(Customer));
 		}
 	}
 
-	outFile.close();
+	writeFile.close();
 }
 
 void create_file(string path)
 {
-	ofstream outFile(path, ios::binary);
+	ofstream writeFile(path, ios::binary);
 
-	if (!outFile)
+	if (!writeFile)
 	{
 		cout << "Error!";
 	}
@@ -49,30 +34,30 @@ void create_file(string path)
 		customers = vec_customer_fill();
 		for (int i = 0; i < customers.size(); i++)
 		{
-			outFile.write((char*)&customers[i], sizeof(Customer));
+			writeFile.write((char*)&customers[i], sizeof(Customer));
 		}
 	}
 
-	outFile.close();
+	writeFile.close();
 }
 
 vector<Customer> write_file_data_in_vector(string path)
 {
 	vector<Customer> customers;
 	Customer cust;
-	ifstream inFile(path, ios::binary);
-	if (!inFile)
+	ifstream readFile(path, ios::binary);
+	if (!readFile)
 	{
 		cout << "Error!";
 	}
 	else
 	{
-		while (inFile.read((char*)&cust, sizeof(Customer)))
+		while (readFile.read((char*)&cust, sizeof(Customer)))
 		{
 			customers.push_back(cust);
 		}
 	}
-	inFile.close();
+	readFile.close();
 
 	return customers;
 }
@@ -88,7 +73,6 @@ void out_file_data(string path)
 
 void make_second_customers_list(string path, string secPath, string anotherPath)
 {
-	ifstream readFile(path, ios::binary);
 	ofstream writeSecFile(secPath, ios::binary);
 	ofstream writeAnotherFile(anotherPath, ios::binary);
 
@@ -104,4 +88,6 @@ void make_second_customers_list(string path, string secPath, string anotherPath)
 			writeAnotherFile.write((char*)&customers[i], sizeof(Customer));
 		}
 	}
+	writeAnotherFile.close();
+	writeSecFile.close();
 }

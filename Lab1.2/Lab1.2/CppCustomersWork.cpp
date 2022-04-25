@@ -3,7 +3,7 @@
 Customer customer_fill()
 {
 	Customer cust;
-	cout << "Write name and second name of castomer" << endl;
+	cout << "Write secondname of castomer" << endl;
 	cin >> cust.secondname;
 	cout << "Write date of last visit like dd.mm.yyyy" << endl;
 	cust.lastVisit = date_fill();
@@ -36,10 +36,10 @@ Date date_fill()
 
 vector<Customer>  vector_without_old_customers(string path)
 {
-	ifstream inFile(path, ios::binary);
+	ifstream readFile(path, ios::binary);
 	vector<Customer> customers;
 	customers = write_file_data_in_vector(path);
-	if (!inFile)
+	if (!readFile)
 	{
 		cout << "Error!";
 	}
@@ -53,16 +53,16 @@ vector<Customer>  vector_without_old_customers(string path)
 			}
 		}
 	}
-	inFile.close();
+	readFile.close();
 	return customers;
 }
 
 void delet_old_customers(string path)
 {
 	vector<Customer> customers = vector_without_old_customers(path);
-	ofstream outFile(path, ios::binary);
+	ofstream writeFile(path, ios::binary);
 
-	if (!outFile)
+	if (!writeFile)
 	{
 		cout << "Error!";
 	}
@@ -70,11 +70,11 @@ void delet_old_customers(string path)
 	{
 		for (int i = 0; i < customers.size(); i++)
 		{
-			outFile.write((const char*)&customers[i], sizeof(Customer));
+			writeFile.write((const char*)&customers[i], sizeof(Customer));
 		}
 	}
 
-	outFile.close();
+	writeFile.close();
 }
 
 bool is_old_cust(Customer cust)

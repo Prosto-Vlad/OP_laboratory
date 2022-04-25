@@ -21,7 +21,6 @@ struct Customer
 	Date NextVisit;
 };
 
-void edit_or_create(string);
 void edit_file(string);
 void create_file(string);
 vector<Customer>write_file_data_in_vector(string);
