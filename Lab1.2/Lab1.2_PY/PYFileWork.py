@@ -99,6 +99,17 @@ def customer_out(cust):
     date_out(cust['nextVisit'])
     print()
 
+def list_without_old_cust(path):
+    customers = []
+    customers = write_file_data_in_list(path)
+    i = 0
+    for cust in customers:
+        if is_old_cust(cust):
+            customers.pop(i)
+        else:
+            i += 1
+    return customers
+
 def is_second_cust(cust):
     local_time = date.today()
     chek = False
@@ -129,14 +140,3 @@ def is_old_cust(cust):
             if cust['nextVisit']['day'] < local_time.day:
                 chek = True
     return chek
-
-def list_without_old_cust(path):
-    customers = []
-    customers = write_file_data_in_list(path)
-    i = 0
-    for cust in customers:
-        if is_old_cust(cust):
-            customers.pop(i)
-        else:
-            i += 1
-    return customers

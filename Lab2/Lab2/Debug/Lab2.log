@@ -1,2 +1,7 @@
-﻿  main.cpp
+﻿  Fynction.cpp
+D:\Visual Projects\OP_laboratory\Lab2\Lab2\Fynction.cpp(45,20): warning C4018: '<': signed/unsigned mismatch
+D:\Visual Projects\OP_laboratory\Lab2\Lab2\Fynction.cpp(53,20): warning C4018: '<': signed/unsigned mismatch
+D:\Visual Projects\OP_laboratory\Lab2\Lab2\Fynction.cpp(63,20): warning C4018: '<': signed/unsigned mismatch
+  main.cpp
+  Generating Code...
   Lab2.vcxproj -> D:\Visual Projects\OP_laboratory\Lab2\Debug\Lab2_Cpp.exe

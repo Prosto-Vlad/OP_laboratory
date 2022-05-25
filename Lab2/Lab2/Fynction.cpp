@@ -1,10 +1,5 @@
 #include "HeaderFunction.h"
 
-Line::Line()
-{
-
-}
-
 Line::Line(int numA, int numB, int numC)
 {
 	a = numA;

@@ -17,7 +17,7 @@ private:
 	int b;
 	int c;
 public:
-	Line();
+	Line() {};
 	Line(int, int, int);
 	int GetA();
 	int GetB();

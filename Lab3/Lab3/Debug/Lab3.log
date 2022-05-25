@@ -1,0 +1,9 @@
+﻿  Function.cpp
+D:\Visual Projects\OP_laboratory\Lab3\Lab3\Function.cpp(29,21): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+D:\Visual Projects\OP_laboratory\Lab3\Lab3\Function.cpp(30,21): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+D:\Visual Projects\OP_laboratory\Lab3\Lab3\Function.cpp(52,9): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+D:\Visual Projects\OP_laboratory\Lab3\Lab3\Function.cpp(71,20): warning C4018: '<': signed/unsigned mismatch
+D:\Visual Projects\OP_laboratory\Lab3\Lab3\Function.cpp(79,36): warning C4018: '<': signed/unsigned mismatch
+  main.cpp
+  Generating Code...
+  Lab3.vcxproj -> D:\Visual Projects\OP_laboratory\Lab3\Debug\Lab3.exe
