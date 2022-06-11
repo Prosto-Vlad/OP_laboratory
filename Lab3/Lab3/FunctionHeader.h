@@ -11,7 +11,7 @@ private:
 	int cordX;
 	int cordY;
 public:
-	Vector() {};
+	Vector() { cordX = 0; cordY = 0; };
 	Vector(int, int);
 	Vector(string);
 	Vector operator-(Vector);
@@ -19,7 +19,7 @@ public:
 
 	int getX();
 	int getY();
-	int findLenght();
+	double findLenght();
 	void print();
 };
 

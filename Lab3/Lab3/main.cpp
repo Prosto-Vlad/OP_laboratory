@@ -12,10 +12,10 @@ int main()
 	str = stringInput();
 	Vector V2(str);
 
+	V1 = V1 * 2;
 	cout << "V1";
 	V1.print();
 
-	V2 = V2 * 2;
 	cout << "V2";
 	V2.print();
 

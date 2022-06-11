@@ -46,11 +46,13 @@ int Vector::getY()
 	return cordX;
 }
 
-int Vector::findLenght()
+double Vector::findLenght()
 {
 	double lenght = sqrt(pow(cordX, 2) + pow(cordY, 2));
 	return lenght;
 }
+
+
 
 string stringInput()
 {
